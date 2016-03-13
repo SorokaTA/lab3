@@ -1,16 +1,19 @@
-/*
- * Decompiled with CFR 0_114.
- */
 import java.awt.Component;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
+/**
+*It creates a window
+*/
 public class TitlesFrame
 extends JFrame {
     public TitlesFrame() {
         this.initUI();
     }
 
+	/**
+	*Initializes the interface window
+	*/
     private void initUI() {
         this.setTitle("\u041a\u0440\u0438\u0432\u044b\u0435 \u0444\u0438\u0433\u0443\u0440\u044b");
         this.setDefaultCloseOperation(3);
@@ -19,6 +22,11 @@ extends JFrame {
         this.setLocationRelativeTo(null);
     }
 
+	/**
+	*Runs the program
+	*
+	*@param args parameters to run the program
+	*/
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable(){
 

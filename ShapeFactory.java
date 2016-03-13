@@ -1,6 +1,3 @@
-/*
- * Decompiled with CFR 0_114.
- */
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.GradientPaint;
@@ -12,6 +9,9 @@ import java.awt.geom.GeneralPath;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 
+/**
+*It generates a geometric figure
+*/
 public class ShapeFactory {
     public Shape shape;
     public BasicStroke stroke = new BasicStroke(3.0f);
@@ -76,7 +76,15 @@ public class ShapeFactory {
             }
         }
     }
-
+	/**
+	*It creates an object-shape star
+	*
+	*@param arms number of beams
+	*@param center center coordinates
+	*@param rOuter
+	*@param rInner
+	*@return star object
+	*/
     private static Shape createStar(int arms, Point center, double rOuter, double rInner) {
         double angle = 3.141592653589793 / (double)arms;
         GeneralPath path = new GeneralPath();

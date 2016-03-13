@@ -1,6 +1,3 @@
-/*
- * Decompiled with CFR 0_114.
- */
 import java.awt.BasicStroke;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -16,6 +13,9 @@ import java.awt.geom.AffineTransform;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+/**
+*Creates a container panel
+*/
 public class TitlesPanel
 extends JPanel
 implements ActionListener {
@@ -31,7 +31,11 @@ implements ActionListener {
         this.animation.setInitialDelay(50);
         this.animation.start();
     }
-
+	/**
+	*Generates action in response to the event
+	*
+	*@param arg0 event
+	*/
     @Override
     public void actionPerformed(ActionEvent arg0) {
         if (this.is_done) {
@@ -39,6 +43,9 @@ implements ActionListener {
         }
     }
 
+	/**
+	*Generates the contents of the container
+	*/
     private void doDrawing(Graphics g) {
         this.is_done = false;
         this.g2d = (Graphics2D)g;
@@ -71,6 +78,9 @@ implements ActionListener {
         this.is_done = true;
     }
 
+	/**
+	*It renders the contents of the container
+	*/
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
